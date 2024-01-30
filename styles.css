@@ -1,0 +1,897 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transform: scale(1.2); /* Ajustez la valeur selon vos besoins pour le niveau de zoom */
+}
+
+.system {
+    pointer-events: none;
+    background-image: url('images/fond.png');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+
+
+
+
+.star {
+
+    position: relative;
+    width: 80px; /* Ajustez la taille selon vos besoins */
+    height: 80px;
+    transform-origin: center center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrer le contenu verticalement */
+}
+
+.star img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: rotateJosue 60s linear infinite;
+}
+
+
+
+.orbit {
+    position: absolute;
+    border: 1px dashed white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+
+}
+.orbit-a {
+    width: 300px; /* Deuxième orbite */
+    height: 300px;
+}
+
+.orbit-1 {
+    width: 200px; /* Deuxième orbite */
+    height: 200px;
+}
+.orbit-2 {
+    width: 500px; /* Deuxième orbite */
+    height: 500px;
+}
+
+.orbit-3 {
+    width: 600px; /* Troisième orbite */
+    height: 600px;
+}
+
+.orbit-4 {
+    width: 400px; /* Troisième orbite */
+    height: 400px;
+}
+
+.orbit-5 {
+    width: 500px; /* Largeur de l'ellipse */
+    height: 400px; /* Hauteur de l'ellipse */
+    transform: translate(-55%, -50%) rotate(0deg) scale(1, 0.714) translateX(-165px); /* Ajustez la valeur de rotate pour définir l'angle */
+    border: 1px dashed white; /* Quatrième orbite */
+    border-radius: 50%;
+}
+
+@keyframes rotateJosue {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+.station {
+    position: absolute;
+    width: 15px; /* Ajustez la taille selon vos besoins */
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: rotateStation 10s linear infinite, orbitStation 5s linear infinite;
+}
+
+.station img {
+    width: 100%;
+    height: 100%;
+    /* transform-origin: center center; (commentez ou supprimez cette ligne) */
+    animation: rotateStation 5s linear infinite;
+}
+
+/* Animation pour faire tourner l'image */
+@keyframes rotateStation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation pour faire orbiter l'image */
+@keyframes orbitStation {
+    from {
+        transform: translate(-50%, -50%) rotate(360deg) translate(50px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(0deg) translate(50px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.hourglass {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateHourglass 10s linear infinite, orbitHourglass 30s linear infinite;
+}
+
+
+
+
+
+@keyframes rotateHourglass {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitHourglass {
+    from {
+        transform: translate(-50%, -50%) rotate(180deg) translate(100px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-180deg) translate(100px) rotate(-360deg);
+    }
+}
+
+.hourglass img {
+    width: 100%;
+    height: 100%;
+    /* transform-origin: center center; (commentez ou supprimez cette ligne) */
+    animation: rotateHourglass 7s linear infinite;
+}
+
+
+
+
+
+
+.atrebois {
+    position: absolute;
+    width: 20px; /* Ajustez la taille selon vos besoins */
+    height: 28px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: rotateAtrebois 10s linear infinite, orbitAtrebois 35s linear infinite;
+}
+
+.atrebois img {
+    width: 100%;
+    height: 100%;
+    /* transform-origin: center center; (commentez ou supprimez cette ligne) */
+    animation: rotateAtrebois 10s linear infinite;
+}
+
+/* Animation pour faire tourner l'image */
+@keyframes rotateAtrebois {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation pour faire orbiter l'image */
+@keyframes orbitAtrebois {
+    from {
+        transform: translate(-50%, -50%) rotate(50deg) translate(150px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-310deg) translate(150px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+.cravite {
+    position: absolute;
+    width: 25px; /* Ajustez la taille selon vos besoins */
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: rotateCravite 10s linear infinite, orbitCravite 55s linear infinite;
+}
+
+.cravite img {
+    width: 100%;
+    height: 100%;
+    /* transform-origin: center center; (commentez ou supprimez cette ligne) */
+    animation: rotateCravite 12s linear infinite;
+}
+
+/* Animation pour faire tourner l'image */
+@keyframes rotateCravite {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation pour faire orbiter l'image */
+@keyframes orbitCravite {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translate(200px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg) translate(200px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+
+.leviathe {
+    position: absolute;
+    width: 40px; /* Ajustez la taille selon vos besoins */
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: rotateLeviathe 10s linear infinite, orbitLeviathe 120s linear infinite;
+}
+
+.leviathe img {
+    width: 100%;
+    height: 100%;
+    /* transform-origin: center center; (commentez ou supprimez cette ligne) */
+    animation: rotateLeviathe 15s linear infinite;
+}
+
+/* Animation pour faire tourner l'image */
+@keyframes rotateLeviathe {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation pour faire orbiter l'image */
+@keyframes orbitLeviathe {
+    from {
+        transform: translate(-50%, -50%) rotate(60deg) translate(250px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-300deg) translate(250px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+
+.sombronce {
+    position: absolute;
+    width: 40px; /* Ajustez la taille selon vos besoins */
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: rotateSombronce 10s linear infinite, orbitSombronce 70s linear infinite;
+}
+
+.sombronce img {
+    width: 100%;
+    height: 100%;
+    /* transform-origin: center center; (commentez ou supprimez cette ligne) */
+    animation: rotateSombronce 20s linear infinite;
+}
+
+/* Animation pour faire tourner l'image */
+@keyframes rotateSombronce {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation pour faire orbiter l'image */
+@keyframes orbitSombronce {
+    from {
+        transform: translate(-50%, -50%) rotate(270deg) translate(300px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-90deg) translate(300px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+.oeil {
+    position: absolute;
+    width: 180px; /* Ajustez la taille selon vos besoins */
+    height: 145px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    animation: rotateOeil 10s linear infinite, orbitOeil 50s linear infinite;
+}
+
+.oeil img {
+    width: 100%;
+    height: 100%;
+    transform: rotate(205deg);
+    /* transform-origin: center center; (commentez ou supprimez cette ligne) */
+
+}
+
+
+/* Animation pour faire orbiter l'image */
+@keyframes orbitOeil {
+    from {
+        transform: translate(-50%, -50%) rotate(155deg) translate(550px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(155deg) translate(550px) rotate(0deg);
+    }
+}
+
+.luneO {
+    position: absolute;
+    width: 20px; /* Ajustez la taille selon vos besoins */
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateLune 10s linear infinite, orbitLuneO 7s linear infinite;
+}
+
+.luneO img {
+    width: 100%; /* Utilisez 100% pour que l'image respecte les dimensions de .rocaille */
+    height: 100%;
+    animation: rotateLune 5s linear infinite;
+}
+
+@keyframes rotateLune {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitLuneO {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translate(100px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg) translate(100px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+
+.rocaille {
+    position: absolute;
+    width: 10px; /* Ajustez la taille selon vos besoins */
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateRocaille 10s linear infinite, orbitRocaille 30s linear infinite;
+}
+
+.rocaille img {
+    width: 100%; /* Utilisez 100% pour que l'image respecte les dimensions de .rocaille */
+    height: 100%;
+    animation: rotateRocaille 5s linear infinite;
+}
+
+@keyframes rotateRocaille {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitRocaille {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translate(25px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg) translate(25px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+.lanterne {
+    position: absolute;
+    width: 10px; /* Ajustez la taille selon vos besoins */
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateLanterne 10s linear infinite, orbitLanterne 25s linear infinite;
+}
+
+.lanterne img {
+    width: 100%; /* Utilisez 100% pour que l'image respecte les dimensions de .rocaille */
+    height: 100%;
+    animation: rotateLanterne 5s linear infinite;
+}
+
+@keyframes rotateLanterne {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitLanterne {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translate(25px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(-360deg) translate(25px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+
+.canon {
+    position: absolute;
+    width: 10px; /* Ajustez la taille selon vos besoins */
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateCanon 10s linear infinite, orbitCanon 8s linear infinite;
+}
+
+.canon img {
+    width: 100%; /* Utilisez 100% pour que l'image respecte les dimensions de .rocaille */
+    height: 100%;
+    animation: rotateCanon 8s linear infinite;
+}
+
+@keyframes rotateCanon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitCanon {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translate(30px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg) translate(30px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+
+
+.troublant {
+    position: absolute;
+    width: 20px; /* Ajustez la taille selon vos besoins */
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: rotateTroublant 10s linear infinite, orbitTroublant 30s linear infinite;
+}
+
+.troublant img {
+    width: 100%;
+    height: 100%;
+    /* transform-origin: center center; (commentez ou supprimez cette ligne) */
+    animation: rotateTroublant 20s linear infinite;
+}
+
+/* Animation pour faire tourner l'image */
+@keyframes rotateTroublant {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation pour faire orbiter l'image */
+@keyframes orbitTroublant {
+    from {
+        transform: translate(-50%, -50%) rotate(181deg) translate(400px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(181deg) translate(400px) rotate(-360deg);
+    }
+}
+
+.troublant2 {
+    position: absolute;
+    width: 7px; /* Ajustez la taille selon vos besoins */
+    height: 7px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateTroublant2 10s linear infinite, orbitTroublant2 10s linear infinite;
+}
+
+.troublant2 img {
+    width: 100%; /* Utilisez 100% pour que l'image respecte les dimensions de .rocaille */
+    height: 100%;
+    animation: rotateTroublant2 5s linear infinite;
+}
+
+
+
+@keyframes orbitTroublant2 {
+    from {
+        transform: translate(-50%, -50%) rotate(180deg) translate(420px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(180deg) translate(420px) rotate(0deg);
+    }
+}
+
+
+
+.luneSo {
+    position: absolute;
+    width: 11px; /* Ajustez la taille selon vos besoins */
+    height: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateLune 10s linear infinite, orbitLuneSo 30s linear infinite;
+}
+
+.luneSo img {
+    width: 100%; /* Utilisez 100% pour que l'image respecte les dimensions de .rocaille */
+    height: 100%;
+    animation: rotateLune 5s linear infinite;
+}
+
+@keyframes rotateLune {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitLuneSo {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translate(30px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg) translate(30px) rotate(-360deg);
+    }
+}
+
+
+
+
+.luneL {
+    position: absolute;
+    width: 11px; /* Ajustez la taille selon vos besoins */
+    height: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateLune 10s linear infinite, orbitLuneL 30s linear infinite;
+}
+
+.luneL img {
+    width: 100%; /* Utilisez 100% pour que l'image respecte les dimensions de .rocaille */
+    height: 100%;
+    animation: rotateLune 5s linear infinite;
+}
+
+@keyframes rotateLune {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitLuneL {
+    from {
+        transform: translate(-50%, -50%) rotate(660deg) translate(40px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(300deg) translate(40px) rotate(-360deg);
+    }
+}
+
+
+
+.luneC {
+    position: absolute;
+    width: 11px; /* Ajustez la taille selon vos besoins */
+    height: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateLune 10s linear infinite, orbitLuneC 30s linear infinite;
+}
+
+.luneC img {
+    width: 100%; /* Utilisez 100% pour que l'image respecte les dimensions de .rocaille */
+    height: 100%;
+    animation: rotateLune 5s linear infinite;
+}
+
+@keyframes rotateLune {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitLuneC {
+    from {
+        transform: translate(-50%, -50%) rotate(90deg) translate(30px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(450deg) translate(30px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+.luneA {
+    position: absolute;
+    width: 11px; /* Ajustez la taille selon vos besoins */
+    height: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateLune 10s linear infinite, orbitLuneA 30s linear infinite;
+}
+
+.luneA img {
+    width: 100%; /* Utilisez 100% pour que l'image respecte les dimensions de .rocaille */
+    height: 100%;
+    animation: rotateLune 5s linear infinite;
+}
+
+@keyframes rotateLune {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitLuneA {
+    from {
+        transform: translate(-50%, -50%) rotate(90deg) translate(30px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(450deg) translate(30px) rotate(-360deg);
+    }
+}
+
+
+
+
+.luneS {
+    position: absolute;
+    width: 11px; /* Ajustez la taille selon vos besoins */
+    height: 11px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateLune 10s linear infinite, orbitLuneS 30s linear infinite;
+}
+
+.luneS img {
+    width: 100%; /* Utilisez 100% pour que l'image respecte les dimensions de .rocaille */
+    height: 100%;
+    animation: rotateLune 5s linear infinite;
+}
+
+@keyframes rotateLune {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes orbitLuneS {
+    from {
+        transform: translate(-50%, -50%) rotate(90deg) translate(30px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(450deg) translate(30px) rotate(-360deg);
+    }
+}
+
+
+
+
+
+
+.etranger {
+    position: absolute;
+    width: 80px; /* Ajustez la taille selon vos besoins */
+    height: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    animation: rotateEtranger 10s linear infinite, orbitEtranger 20s linear infinite alternate;
+}
+
+.etranger img {
+    width: 100%;
+    height: 100%;
+    transform: rotate(205deg);
+    /* transform-origin: center center; (commentez ou supprimez cette ligne) */
+    animation: rotateEtranger 20s linear infinite;
+
+}
+
+
+@keyframes rotateEtranger {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animation pour faire orbiter l'image */
+@keyframes orbitEtranger {
+    from {
+        transform: translate(-50%, -50%) rotate(330deg) translate(550px) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(330deg) translate(450px) rotate(0deg);
+    }
+}
+
+
+
+
+
+
+
+.luneO.active,
+.luneA.active,
+.luneC.active,
+.luneL.active,
+.luneSo.active,
+.luneS.active {
+    display: block;
+}
+
+.luneO,
+.luneA,
+.luneC,
+.luneL,
+.luneSo,
+.luneS {
+    display: none;
+}
+
+
+
+
+
+
+
+.lumiere {
+    filter: brightness(150%); /* Vous pouvez ajuster le pourcentage selon vos préférences */
+}
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const grid = document.querySelector('.grid');
+    
+    document.addEventListener('mousemove', function (e) {
+        const mouseX = e.clientX;
+        const mouseY = e.clientY;
+
+        const gridSize = 40;
+        const gridOffset = gridSize / 2;
+
+        grid.style.display = 'block';
+        grid.style.transform = `translate(${Math.floor(mouseX / gridSize) * gridSize - gridOffset}px, ${Math.floor(mouseY / gridSize) * gridSize - gridOffset}px)`;
+    });
+
+    document.addEventListener('mouseout', function () {
+        grid.style.display = 'none';
+    });
+});
+
